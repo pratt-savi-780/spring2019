@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ "css/navbar.css" | prepend:"/" | prepend: site.url }}">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="cover-container">
+      <a class="navbar-brand" href="{{ site.url }}">SAVI 780 – Spring 2019</a>
+      <a class="navbar-brand" href="{{ site.url }}about.html">About</a>
+    </div>
+  </nav>
+
+  <div id="main" class="container">
+
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+
+        <div class="header">
+          <h1>{{ page.title }}</h1>
+          {% for place in page.location %}
+          <h4>{{ place.place }}</h4>
+          {% endfor %}
+          <h5>By {{ page.author }}</h5>
+          <h5>
+            {% for tag in page.tags %}
+              {% if forloop.last == true %}
+              <span>{{ tag.tag | downcase }}</span>
+              {% else %}
+              <span>{{ tag.tag | downcase }},</span>
+              {% endif %}
+            {% endfor %}
+          </h5>
+          <img class="main-img" src="../../{{ page.thumbnail-path }}"/>
+          <p class="lead">{{ page.tagline }}</p>
+        </div>
+        {{ content }}
+        <ul>
+          <h5>Link(s) to full project:</h5>
+          {% for link in page.project-link %}
+          <li><a href="{{ link.href }}" target="_blank">Link {{ forloop.index }} - {{ link.href | remove:'http://' | remove: 'https://' }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    {% include footer-project.html %}
+
+  </div>
+</body>
+</html>

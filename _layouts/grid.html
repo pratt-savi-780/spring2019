@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ "css/navbar.css" | prepend:"/" | prepend: site.url }}">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{{ site.url }}">SAVI 780 – Spring 2019</a>
+      <a class="navbar-brand" href="{{ site.url }}/about.html">About</a>
+    </div>
+  </nav>
+
+  <div id="main" class="container">
+
+    <div class="header">
+      <h1>SAVI 780 – Spring 2019 – Student Projects</h1>
+      <p class="lead">
+        Final projects for <a href="https://commons.pratt.edu/savi/" target="_blank">Pratt SAVI</a>, SAVI 780.
+      </p>
+      <hr>
+    </div>
+
+    <div class="grid-wrapper">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+  </div>
+</body>
+</html>

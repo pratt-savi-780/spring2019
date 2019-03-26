@@ -1,0 +1,80 @@
+---
+layout: grid
+title: "SAVI 780 – Spring 2019 – Student Projects"
+---
+<div class="row buffer">
+  {% for projects in site.projects limit:4 %}
+  <div class="col-md-3">
+    <h4 class="project-title"><a href="projects/{{ projects.linkname }}">{{ projects.title }}</a></h4>
+    <a href="projects/{{ projects.linkname }}"><div class="ratio" style="background-image:url('{{ projects.thumbnail-path }}')">
+    </div></a>
+    <h5>
+      {% for place in projects.location %}
+        {% if forloop.last == true %}
+        <span>{{ place.place }}</span>
+        {% else %}
+        <span>{{ place.place }};</span>
+        {% endif %}
+      {% endfor %}
+    </h5>
+    <p>{{ projects.tagline }}</p>
+  </div>
+  {% endfor %}
+</div>
+<div class="row buffer">
+  {% for projects in site.projects limit:4 offset:4 %}
+  <div class="col-md-3">
+    <h4 class="project-title"><a href="projects/{{ projects.linkname }}">{{ projects.title }}</a></h4>
+    <a href="projects/{{ projects.linkname }}"><div class="ratio" style="background-image:url('{{ projects.thumbnail-path }}')">
+    </div></a>
+    <h5>
+      {% for place in projects.location %}
+        {% if forloop.last == true %}
+        <span>{{ place.place }}</span>
+        {% else %}
+        <span>{{ place.place }};</span>
+        {% endif %}
+      {% endfor %}
+    </h5>
+    <p>{{ projects.tagline }}</p>
+  </div>
+  {% endfor %}
+</div>
+<div class="row buffer">
+  {% for projects in site.projects limit:4 offset:8 %}
+  <div class="col-md-3">
+    <h4 class="project-title"><a href="projects/{{ projects.linkname }}">{{ projects.title }}</a></h4>
+    <a href="projects/{{ projects.linkname }}"><div class="ratio" style="background-image:url('{{ projects.thumbnail-path }}')">
+    </div></a>
+    <h5>
+      {% for place in projects.location %}
+        {% if forloop.last == true %}
+        <span>{{ place.place }}</span>
+        {% else %}
+        <span>{{ place.place }};</span>
+        {% endif %}
+      {% endfor %}
+    </h5>
+    <p>{{ projects.tagline }}</p>
+  </div>
+  {% endfor %}
+</div>
+<div class="row buffer">
+  {% for projects in site.projects limit:4 offset:12 %}
+  <div class="col-md-3">
+    <h4 class="project-title"><a href="projects/{{ projects.linkname }}">{{ projects.title }}</a></h4>
+    <a href="projects/{{ projects.linkname }}"><div class="ratio" style="background-image:url('{{ projects.thumbnail-path }}')">
+    </div></a>
+    <h5>
+      {% for place in projects.location %}
+        {% if forloop.last == true %}
+        <span>{{ place.place }}</span>
+        {% else %}
+        <span>{{ place.place }};</span>
+        {% endif %}
+      {% endfor %}
+    </h5>
+    <p>{{ projects.tagline }}</p>
+  </div>
+  {% endfor %}
+</div>

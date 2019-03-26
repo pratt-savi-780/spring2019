@@ -1,0 +1,22 @@
+<footer class="footer">
+  <div class="cover-container text-muted buffer-bottom buffer-top">
+    <hr class="buffer-bottom">
+    <div class="row">
+      <div class="col-xs-6">
+        <p>{{ site.title }}</p>
+      </div>
+      <div class="col-xs-6">
+        <p class="text-right">
+          <a href="https://commons.pratt.edu/savi/">Pratt SAVI</a>
+        <span class="hidden-xs">&nbsp;|&nbsp;</span>
+        <br class="visible-xs">
+          {% if site.github_username %}
+          <span>
+            {% include icon-github.html username=site.github_username %}
+          </span>
+          {% endif %}
+        </div>
+        </p>
+    </div>
+  </div>
+</footer>

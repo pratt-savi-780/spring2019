@@ -1,0 +1,20 @@
+# Site settings
+title: SAVI 780 – Spring 2019
+email:
+description: > # this means to ignore newlines until "baseurl:"
+  This website displays student projects from the Pratt
+  SAVI 780 class – Spring 2019.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://pratt-savi-780.github.io/spring2019" # the base hostname & protocol for your site
+twitter_username: PrattSAVI
+github_username:  pratt-savi-780
+
+# Build settings
+markdown: kramdown
+
+# Collections
+collections:
+  projects:
+    author: name
+    output: true
+    permalink: /projects/:path/
